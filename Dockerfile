@@ -3,6 +3,14 @@ FROM hypriot/rpi-alpine:3.5
 ENV PGADMIN_VERSION=1.3 \
     PYTHONDONTWRITEBYTECODE=1
 
+ARG VCS_REF
+ARG BUILD_DATE
+
+LABEL \ 
+	org.label-schema.build-date=$BUILD_DATE \
+	org.label-schema.vcs-ref=$VCS_REF \
+	org.label-schema.vcs-url="https://github.com/simonqbs-dockerfiles/arm-mosquitto"
+
 RUN \
 	apk add --no-cache python postgresql-dev
 
