@@ -9,7 +9,7 @@ ARG BUILD_DATE
 LABEL \ 
 	org.label-schema.build-date=$BUILD_DATE \
 	org.label-schema.vcs-ref=$VCS_REF \
-	org.label-schema.vcs-url="https://github.com/simonqbs-dockerfiles/arm-mosquitto"
+	org.label-schema.vcs-url="https://github.com/simonqbs-dockerfiles/arm-pgadmin4"
 
 RUN \
 	apk add --no-cache python postgresql-dev
